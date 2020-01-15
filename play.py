@@ -8,13 +8,13 @@ def play():
       player1 = mcts(iterationLimit=500)
       player2 = mcts(iterationLimit=500)
       while not b.isOver:
-         m = player1.search(copy.deepcopy(b))
+         m = player1.search(b)
          print(m)
          b.makeMove(m)
          print(b)
          if b.isOver:
             break
-         m = player2.search(copy.deepcopy(b))
+         m = player2.search(b)
          print(m)
          b.makeMove(m)
 
