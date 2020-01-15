@@ -130,30 +130,3 @@ class Board:
         self.current_player *= -1
         self._winner = 0
 
-
-if __name__ == "__main__":
-    b = Board()
-    print(b)
-
-    m11 = Move(1, 1)
-    m22 = Move(2, 2)
-    m33 = Move(3, 3)
-    print(m11 == m11)
-    print(m11 == m22)
-    b.makeMove(m11)
-    b.makeMove(m22)
-    b.makeMove(Move(1, 2))
-    b.makeMove(Move(2, 3))
-    b.makeMove(Move(1, 3))
-    b.makeMove(Move(2, 4))
-    b.makeMove(Move(1, 4))
-    b.makeMove(Move(5, 2))
-
-    print(f"has winner: {b.hasWinner()}")
-    b.makeMove(Move(1, 5))
-    print(f"has winner: {b.hasWinner()}")
-    print(b)
-    b.undo_last_move()
-
-    b.makeMove(m33)
- #   print(b)
