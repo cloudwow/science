@@ -24,7 +24,7 @@ class Move:
 
 
 class Board:
-    def __init__(self):
+    def __init__(self ):
         self.cells = np.zeros((BOARD_WIDTH, BOARD_WIDTH))
         self.available_moves = set()
 
@@ -34,6 +34,7 @@ class Board:
         self.current_player = 1
         self.move_stack = []
         self._winner = 0
+    def deepCopy(self):
 
     def get(self, x, y):
         return self.cells[y][x]
