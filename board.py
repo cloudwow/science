@@ -34,7 +34,6 @@ class Board:
         self.current_player = 1
         self.move_stack = []
         self._winner = 0
-    def deepCopy(self):
 
     def get(self, x, y):
         return self.cells[y][x]
